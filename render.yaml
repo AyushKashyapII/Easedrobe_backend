@@ -1,1 +1,10 @@
+services:
+  - type: web
+    name: Easedrobe-ai-backend
+    runtime: python
+    buildCommand: ""
+    startCommand: uvicorn app:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: TRANSFORMERS_CACHE
+        value: /var/cache/huggingface
 
